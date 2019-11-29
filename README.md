@@ -10,10 +10,13 @@ $ npm run serve
 ```
 
 #### 修改请求url
-./src/main.ts/
+./src/main.ts
 ```javascript
-baseURL: process.env.NODE_ENV === 'production' ? process.env.VUE_APP_TITLE : 'http://127.0.0.1:3002'
-// 本地serve 下，可修改./env.experiment 里面的url进行测试
+const axios = Axios.create({
+  baseURL: process.env.NODE_ENV === 'production' && process.env.VUE_APP_TITLE !== 'experiment' ? 'http://build' : 'http://debug'
+})
+// http://build 为构建环境
+// http://debug 开发环境
 ```
 
 #### 设置文件资源url

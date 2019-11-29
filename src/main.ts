@@ -14,7 +14,7 @@ declare module 'vue/types/vue' {
 }
 
 const axios = Axios.create({
-  baseURL: process.env.NODE_ENV === 'production' ? process.env.VUE_APP_TITLE : 'http://127.0.0.1:3002' // process.env.VUE_APP_TITLE
+  baseURL: process.env.NODE_ENV === 'production' && process.env.VUE_APP_TITLE !== 'experiment' ? 'http://build' : 'http://debug'
 })
 
 Vue.config.productionTip = false
