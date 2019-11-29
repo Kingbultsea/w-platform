@@ -6,7 +6,7 @@ $ npm install
 
 #### 开发环境启动
 ```shell script
-npm run serve
+$ npm run serve
 ```
 
 #### 修改请求url
@@ -33,14 +33,14 @@ module.exports = {
 更换./cdn.js里面的key secret,设置文件url 为七牛服务器
 ```shell script
 // ./dist/*上传到服务器
-node cdn
+$ node cdn
 ```
 
 
 #### 打包（有需要可以分正式服测试服）
 ```shell script
-npm run build
+$ npm run build
 
 // 如果需要上传到七牛cdn
-npm run build && node cdn
+$ npm run build && node cdn
 ```
