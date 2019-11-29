@@ -4,7 +4,7 @@ node >= 10, npm >= 4
 $ npm install
 ```
 
-#### 构建环境启动
+#### 开发环境启动
 ```shell script
 npm run serve
 ```
